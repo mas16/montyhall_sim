@@ -60,9 +60,9 @@ while COUNTER < TRIES:
      #with each play
      if SWITCH == 'r':
           S = ra.randint(0,2)
-          if S==0:
+          if S == 0:
                switch = 'y'
-          elif S==1:
+          elif S == 1:
                switch = 'n'
      else:
           switch = SWITCH
