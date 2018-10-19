@@ -1,15 +1,17 @@
-#Simulation of Monty Hall Problem
-#by Matt Stetz 03/2018
+'''
+Simulation of Monty Hall Problem
+by Matt Stetz 03/2018
 
-#The Monty Hall problem is a fun statistics
-#brain teaser where a game show contestant
-#is asked to pick one of three doors.
+The Monty Hall problem is a fun statistics
+brain teaser where a game show contestant
+is asked to pick one of three doors.
 
-#Behind two of the doors are goats and
-#behind one door is a car
-#After the contestant chooses a door
-#The host, Monty Hall, reveals one goat
-#He then asks the contestant if they want to change their choice
+Behind two of the doors are goats and
+behind one door is a car
+After the contestant chooses a door
+The host, Monty Hall, reveals one goat
+He then asks the contestant if they want to change their choice
+'''
 
 ###
 #Is the contestant more likely to win the car if they switch their choice?
@@ -52,6 +54,9 @@ POS_2 = ['c','g','g']
 #Store the possibilities in an array
 POS = [POS_0,POS_1,POS_2]
 
+
+#Use while loop to avoid memory limitations
+#for large number of tries
 while COUNTER < TRIES:
      
      #If random choice is selected, randomly choose to switch or not
