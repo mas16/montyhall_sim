@@ -16,3 +16,10 @@ This scrip will allow you to play the game as many times as you want. You have t
 
 ## Execution
 Set the flags at the top of the script then run
+
+## Example Output
+Example plots for different outputs can be found in the "Results" folder
+
+* Below is an example plot for 300 plays where the playe always switches after being shown the goat
+
+![](./Results/switch.png)
