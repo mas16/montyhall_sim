@@ -18,8 +18,17 @@ This scrip will allow you to play the game as many times as you want. You have t
 Set the flags at the top of the script then run
 
 ## Example Output
-Example plots for different outputs can be found in the "Results" folder
+Example plots for different scenarios can be found in the "Results" folder
 
-* Below is an example plot for 300 plays where the playe always switches after being shown the goat
+* Below is an example plot of number of wins vs number of losses for 300 plays where the player always switches after being shown the goat
 
 ![](./Results/switch.png)
+
+* Below is an example plot of number of wins vs number of losses for 300 plays where the player never switches after being shown the goat
+
+![](./Results/hold.png)
+
+* Below is an example plot of number of wins vs number of losses for 300 plays where the player switches 150/300 times and holds 150/300 times
+![](./Results/switch.png)
+
+It is clear that switching your original choice doubles your chances of winning the car!
