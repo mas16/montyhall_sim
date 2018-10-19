@@ -144,5 +144,5 @@ plt.text(2.2,max(y_axis)*1.02,'Tries = '+str(COUNTER),fontsize=18)
 plt.axis([0,3,0,1.1*max(y_axis)])
 plt.show()
 '''
-print 'NUMBER OF WINS = '+str(WINS)
-print 'NUMBER OF LOSES = '+str(LOSS)
+print ('NUMBER OF WINS = '+str(WINS))
+print ('NUMBER OF LOSES = '+str(LOSS))
