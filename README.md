@@ -29,6 +29,6 @@ Example plots for different scenarios can be found in the "Results" folder
 ![](./Results/hold.png)
 
 * Below is an example plot of number of wins vs number of losses for 300 plays where the player switches 150/300 times and holds 150/300 times
-![](./Results/switch.png)
+![](./Results/random.png)
 
 It is clear that switching your original choice doubles your chances of winning the car!
