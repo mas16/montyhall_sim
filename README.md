@@ -18,7 +18,9 @@ This scrip will allow you to play the game as many times as you want. You have t
 Set the flags at the top of the script then run
 
 ## Example Output
-Example plots for different scenarios can be found in the "Results" folder
+There is a sample data file called "ellendata.txt" in the repo that can be used to test the script
+
+Example plots for different scenarios while running the script on "ellendata.txt" can be found in the "example_output" folder
 
 * Below is an example plot of number of wins vs number of losses for 300 plays where the player always switches after being shown the goat
 
