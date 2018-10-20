@@ -59,77 +59,77 @@ POS = [POS_0,POS_1,POS_2]
 #for large number of tries
 while COUNTER < TRIES:
      
-     #If random choice is selected, randomly choose to switch or not
-     #If not don't change the choice
-     #Have to move SWITCH to new variable so it doesn't get overwritten
-     #with each play
-     if SWITCH == 'r':
-          S = ra.randint(0,2)
-          if S == 0:
-               switch = 'y'
-          elif S == 1:
-               switch = 'n'
-     else:
-          switch = SWITCH
+    #If random choice is selected, randomly choose to switch or not
+    #If not don't change the choice
+    #Have to move SWITCH to new variable so it doesn't get overwritten
+    #with each play
+    if SWITCH == 'r':
+        S = ra.randint(0,2)
+        if S == 0:
+            switch = 'y'
+        elif S == 1:
+            switch = 'n'
+    else:
+        switch = SWITCH
      
-     #Randomly assign the scenario
-     NUM = ra.randint(0,3)
-     SCENARIO = POS[NUM]
+    #Randomly assign the scenario
+    NUM = ra.randint(0,3)
+    SCENARIO = POS[NUM]
 
-     #Randomly assign the door the constestant chooses
-     GUESS = ra.randint(0,3)
+    #Randomly assign the door the constestant chooses
+    GUESS = ra.randint(0,3)
 
-     #Show Monty where the goats are
-     GOATS = []
-     for x in range(len(SCENARIO)):
-          if SCENARIO[x] == 'g':
-               GOATS.append(x)
-          else:
-               CAR = x
+    #Show Monty where the goats are
+    GOATS = []
+    for x in range(len(SCENARIO)):
+        if SCENARIO[x] == 'g':
+            GOATS.append(x)
+        else:
+            CAR = x
 
-     #Let Monty reveal one of the goats...but only one!
-     for goat in GOATS:
-          if goat != GUESS:
-               REVEAL = goat
-               break
+    #Let Monty reveal one of the goats...but only one!
+    for goat in GOATS:
+        if goat != GUESS:
+            REVEAL = goat
+            break
 
-     #Figure out which choice is left
-     GONE = [REVEAL,GUESS]
-     for x in [0,1,2]:
-          if x not in GONE:
-               LEFT = x
+    #Figure out which choice is left
+    GONE = [REVEAL,GUESS]
+    for x in [0,1,2]:
+        if x not in GONE:
+            LEFT = x
 
-     #Switch contestant's choice
-     yes = ['Y','y','yes','YES','Yes']
-     if switch in yes:
-          GUESS = LEFT
-     #Don't switch contestant's choice
-     elif switch == 'n':
-          pass
+    #Switch contestant's choice
+    yes = ['Y','y','yes','YES','Yes']
+    if switch in yes:
+        GUESS = LEFT
+    #Don't switch contestant's choice
+    elif switch == 'n':
+        pass
 
-     #Check to see if the contestant won
-     if GUESS == CAR:
-          WINS += 1
-     elif GUESS != CAR:
+    #Check to see if the contestant won
+    if GUESS == CAR:
+        WINS += 1
+    elif GUESS != CAR:
           LOSS += 1
      
-     '''
-     ###Plot to make movie
-     x_axis=[0,1,2,3]
-     x_names=['','Wins','Losses','']
-     y_axis=[0,WINS,LOSS,0]
-     plt.bar(x_axis,y_axis,width=0.4,align='center',edgecolor='k',linewidth=1.5)
-     plt.yticks(fontsize=18)
-     plt.xticks(x_axis,x_names,fontsize=18)
-     plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
-     plt.text(2.2,330,'Tries = '+str(COUNTER+1),fontsize=18)
-     plt.axis([0,3,0,350])
-     plt.savefig('/Users/matthewstetz/Desktop/datascience/montyhall/random/plot'+str(COUNTER+1)+'.png')
-     plt.clf()
-     '''
+    '''
+    ###Plot to make movie
+    x_axis=[0,1,2,3]
+    x_names=['','Wins','Losses','']
+    y_axis=[0,WINS,LOSS,0]
+    plt.bar(x_axis,y_axis,width=0.4,align='center',edgecolor='k',linewidth=1.5)
+    plt.yticks(fontsize=18)
+    plt.xticks(x_axis,x_names,fontsize=18)
+    plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
+    plt.text(2.2,330,'Tries = '+str(COUNTER+1),fontsize=18)
+    plt.axis([0,3,0,350])
+    plt.savefig('/Users/matthewstetz/Desktop/datascience/montyhall/random/plot'+str(COUNTER+1)+'.png')
+    plt.clf()
+    '''
      
-     #Next play
-     COUNTER += 1
+    #Next play
+    COUNTER += 1
 '''     
 ###Plot results
 x_axis=[0,1,2,3]
