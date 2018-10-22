@@ -1,21 +1,18 @@
 """
-Simulation of Monty Hall Problem
-by Matt Stetz 03/2018
+Simulation of Monty Hall Problem.
+By MAS 03/2018.
 
-The Monty Hall problem is a fun statistics
-brain teaser where a game show contestant
-is asked to pick one of three doors.
+The Monty Hall problem is a fun probability brain teaser
+where a game show contestant is asked to pick one of three doors.
 
-Behind two of the doors are goats and
-behind one door is a car
-After the contestant chooses a door
-The host, Monty Hall, reveals one goat
-He then asks the contestant if they want to change their choice
+Behind two of the doors are goats and behind one door is a car.
+
+After the contestant chooses a door, the host, Monty Hall, reveals one goat.
+
+He then asks the contestant if they want to change their choice...
+
+Is the contestant more likely to win the car if they switch their choice?
 """
-
-###
-#Is the contestant more likely to win the car if they switch their choice?
-###
 
 #Import libraries
 import numpy as np
@@ -113,36 +110,34 @@ while COUNTER < TRIES:
     elif GUESS != CAR:
           LOSS += 1
      
-    '''
     ###Plot to make movie
-    x_axis=[0,1,2,3]
-    x_names=['','Wins','Losses','']
-    y_axis=[0,WINS,LOSS,0]
-    plt.bar(x_axis,y_axis,width=0.4,align='center',edgecolor='k',linewidth=1.5)
-    plt.yticks(fontsize=18)
-    plt.xticks(x_axis,x_names,fontsize=18)
-    plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
-    plt.text(2.2,330,'Tries = '+str(COUNTER+1),fontsize=18)
-    plt.axis([0,3,0,350])
-    plt.savefig('/Users/matthewstetz/Desktop/datascience/montyhall/random/plot'+str(COUNTER+1)+'.png')
-    plt.clf()
-    '''
+    #x_axis=[0,1,2,3]
+    #x_names=['','Wins','Losses','']
+    #y_axis=[0,WINS,LOSS,0]
+    #plt.bar(x_axis,y_axis,width=0.4,align='center',edgecolor='k',linewidth=1.5)
+    #plt.yticks(fontsize=18)
+    #plt.xticks(x_axis,x_names,fontsize=18)
+    #plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
+    #plt.text(2.2,330,'Tries = '+str(COUNTER+1),fontsize=18)
+    #plt.axis([0,3,0,350])
+    #plt.savefig('/Users/matthewstetz/Desktop/datascience/montyhall/random/plot'+str(COUNTER+1)+'.png')
+    #plt.clf()
      
     #Next play
     COUNTER += 1
-'''     
+
 ###Plot results
-x_axis=[0,1,2,3]
-x_names=['','Wins','Losses','']
-y_axis=[0,WINS,LOSS,0]
-plt.bar(x_axis,y_axis,width=0.4,align='center',edgecolor='k',linewidth=1.5)
-plt.yticks(fontsize=18)
-plt.xticks(x_axis,x_names,fontsize=18)
-plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
-plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
-plt.text(2.2,max(y_axis)*1.02,'Tries = '+str(COUNTER),fontsize=18)
-plt.axis([0,3,0,1.1*max(y_axis)])
-plt.show()
-'''
+#x_axis=[0,1,2,3]
+#x_names=['','Wins','Losses','']
+#y_axis=[0,WINS,LOSS,0]
+#plt.bar(x_axis,y_axis,width=0.4,align='center',edgecolor='k',linewidth=1.5)
+#plt.yticks(fontsize=18)
+#plt.xticks(x_axis,x_names,fontsize=18)
+#plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
+#plt.tick_params(direction='out',bottom='on',top='off',left='on',right='off')
+#plt.text(2.2,max(y_axis)*1.02,'Tries = '+str(COUNTER),fontsize=18)
+#plt.axis([0,3,0,1.1*max(y_axis)])
+#plt.show()
+
 print ('NUMBER OF WINS = '+str(WINS))
 print ('NUMBER OF LOSES = '+str(LOSS))
