@@ -1,4 +1,4 @@
-'''
+"""
 Simulation of Monty Hall Problem
 by Matt Stetz 03/2018
 
@@ -11,7 +11,7 @@ behind one door is a car
 After the contestant chooses a door
 The host, Monty Hall, reveals one goat
 He then asks the contestant if they want to change their choice
-'''
+"""
 
 ###
 #Is the contestant more likely to win the car if they switch their choice?
